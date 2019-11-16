@@ -11,7 +11,7 @@
 
 	<properties>
 		<!-- Spring -->
-		<spring-framework.version>4.3.3.RELEASE</spring-framework.version>
+		<spring-framework.version>5.2.1.RELEASE</spring-framework.version>
 		<!-- Java EE / Java SE dependencies -->
 		<servlet.version>2.5</servlet.version>
 		<net.sf.jasperreports-version>6.3.1</net.sf.jasperreports-version>
