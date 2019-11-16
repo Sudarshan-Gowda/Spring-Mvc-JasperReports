@@ -1,0 +1,40 @@
+<style>
+.alert-info {
+  color: #176b76 !important; 
+  background-color: #C0D9E5 !important; 
+  border-color: #C0D9E5 !important;   }
+</style>
+<div class="col-12">
+	<c:if test="${not empty msgsuccess}">
+		<div class="alert  alert-info mb-2 alert-dismissible" role="alert">
+			<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">×</span></button>
+			<strong>${msgsuccess}</strong>
+		</div>
+		<script>
+			$( document ).ready(function() {
+				notif({msg: "${msgsuccess}",type: "success",width: "900",position: "center",autohide: true});
+			});
+		</script>
+		<%--div class="alert alert-info mb-2" role="alert"><strong>${msginfo}</strong></div--%>
+	</c:if>
+	<c:if test="${not empty msgwarn}"><div class="alert alert-warning mb-2" role="alert"><strong>${msgwarn}</strong></div></c:if>
+	<c:if test="${not empty msgdanger}">
+		<div class="alert alert-danger mb-2 alert-dismissible" role="alert">
+			<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">×</span></button>
+			<strong>${msgdanger}</strong>
+		</div>
+		<script>
+			$( document ).ready(function() {
+				notif({msg: "${msgdanger}",type: "danger",width: "900",position: "center",autohide: true});
+			});
+		</script>
+	</c:if>										
+	<%--spring:hasBindErrors name="accountType">
+		<div class="alert alert-danger mb-2" role="alert">
+			<c:forEach var="error" items="${errors.allErrors}">
+				<spring:message message="${error}" /><br/>
+			</c:forEach>
+		</div>
+	</spring:hasBindErrors--%>
+</div>
+
